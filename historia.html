@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #ffffff;
+}
+.menu {
+            display: flex;
+            align-items: center;
+            background-color: #b1cfcf;
+            padding: 10px 20px;
+            color: white;
+        }
+        .menu a {
+            margin-left: 10px;
+        }
+        .menu a img{
+            width: 250px;
+            height: 60px;
+        }
+        .menu ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin-left: auto;
+        }
+        .menu ul li {
+            position: relative;
+            margin: 0 15px;
+        }
+        .menu ul li a {
+            text-decoration: none;
+            color: #003767;
+        }
+        .menu ul li:hover .dropdown {
+            display: block;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ad8f76de;
+            padding: 10px 0;
+            width: 200px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .dropdown a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+        }
+        .dropdown a:hover {
+            background-color: #c9ab93ad;
+        }
+        .menu .dropdown a{
+            color: rgb(0, 0, 0);
+        }
+        .hamburguer {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .hamburguer div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            margin: 5px 0;
+        }
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.95);
+            justify-content: flex-start;
+            padding-top: 50px;
+            align-items: center;
+            z-index: 1000;
+        }
+        .mobile-menu a {
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .mobile-menu a:hover {
+            background-color: #555;
+        }
+        .mobile-menu .dropdown {
+            display: none;
+        }
+        .mobile-menu .expandable:hover .dropdown {
+            display: block;
+            width: 100%;
+        }
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+        @media (max-width: 992px) {
+            .menu ul {
+                display: none;
+            }
+            .hamburguer {
+                display: flex;
+            }
+            .mobile-menu.show {
+                display: flex;
+            }
+        }
+        
+
+    table {
+      width: 100%;
+      height: 100%;
+      border-collapse: collapse;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    thead {
+      background-color: #276fb3;
+      color: white;
+    }
+
+    th, td {
+      padding: 12px 20px;
+      text-align: left;
+      font-size: 16px;
+    }
+
+    th {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    td {
+      background-color: white;
+    }
+
+    caption {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    @media screen and (max-width: 768px) {
+      table {
+        font-size: 14px;
+      }
+
+      th, td {
+        padding: 8px 12px;
+      }
+    }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <div class="hamburguer" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <a href="index.html"><img src="Aberto para inserir identificador.png" alt="logo"></a>
+        <ul>
+            <li><a href="#">Redes Sociais</a>
+                <div class="dropdown">
+                <a href="https://www.instagram.com/adventistasribeiraopreto?igsh=azVxM3ozdWc2b3Z1">Instagram</a>
+                <a href="https://www.facebook.com/iasdcentralribeiraopreto">Facebook</a>
+                <a href="https://open.spotify.com/playlist/1AtG9Fxi0iiJPXGP1dPHxC?si=T0wK0lSBRpWSMSHtEQ9Exg">Playlist Hinário</a>
+                </li>
+            <li><a href="#">Acomodações</a>
+                <div class="dropdown">
+                    <a href="igreja.html">Igreja</a>
+                    <a href="jovem.html">Sala jovem</a>
+                    <a href="adolescentes.html">Sala do adolescentes</a>
+                    <a href="juvenis.html">Sala do juvenis</a>
+                    <a href="primarios.html">Sala do primários </a>
+                    <a href="jardimdainfancia.html">Sala do jardim da infância</a>
+                    <a href="primarios.html">Sala do rol do berço</a></li>
+            <li><a href="crenças.html">Crenças</a></li>
+            <li><a href="historia.html">História</a></li>
+            <li><a href="pastor.html">Pastor distrital</a></li>
+            <li><a href="ancionato.html">Ancionato</a></li>
+        </ul>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <span class="close-btn" onclick="toggleMenu()">&times;</span>
+        <a href="#">Redes Sociais</a>
+        <a href="#">Acomodações</a>
+        <a href="#">Crenças</a>
+        <a href="#">História</a>
+        <a href="#">Pastor distrital</a>
+        <a href="#">Ancionato</a>
+    </div>
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('show');
+        }
+    </script>
+        <h1>Igreja Adventista do Sétimo Dia em Ribeirão Preto</h1>
+        <p>A mensagem Adventista chegou em Ribeirão Preto em 1928, através de um Colportor. Passando por uma estrada a cavalo, encontrou o Sr. Luiz Trivelatto esculpindo um Santo Católico no portão do seu sitio, que hoje está situado o Ribeirão Shopping, eles começaram a conversar e logo o Colportor pediu pouso ao Sr. Luiz e ele bondosamente o recebeu. O Colportor trazia consigo duas pesadas malas e pediu que o Sr. Luiz guardasse uma delas que voltaria a buscar, mas este dia nunca chegou. Dois anos mais tarde, o Sr. Luiz não resistindo mais, abriu a mala e encontrou uma Bíblia, leu e descobriu nela a verdade sobre a guarda do Sábado. Como não tinha conhecimento sobre a igreja que guardava o Sábado, passou a assistir com os Metodistas, mas não estava satisfeito. Um dia, saindo da sua igreja ele descobriu um salão bem pequeno com o letreiro: Igreja Adventista do Sétimo Dia, onde o Pr. Luis Braun realizava os cultos com poucas pessoas. Ele se interessou e passou a frequentar com toda a sua família. Eram realizados também, estudos Bíblicos com seis famílias, na residência da Sra Suzana Ferreira, à Rua Ceará nos Campos Elíseos. Vale a pena ressaltar que o Sr. Luiz Trivelatto é pai de Rosa Sella e avô de João e Nelson Sella. Rosa filha de Luiz Trivelato decidiu guardar o Sábado, por um milagre da cura do seu filho Nelson. Em 1930 teve o primeiro batismo dos quais participaram: Rosa Sella, Luiz Trivelatto com a família e outros. No início de 1932, foi formado outro grupo de estudos, desta vez na residência da Sra Rosa Trigo na Vila Tibério, nesta ocasião o Pr. Alfredo Meyer, dava assistência espiritual ao pequeno grupo. Mais tarde, com a vinda permanente da Obreira Bíblica Iracema Zorub, foi alugado um salão maior na Rua Tibiriçá, pra comportar todas as famílias. O maior batismo aconteceu em 1932, através de uma conferência pública realizada pelo Pr. Gerônimo Garcia, com o apoio da Obreira Iracema Zorub e para alegria de todos, cerca de 40 pessoas desceram as águas no Córrego Ribeirão, próximo onde é hoje a Câmara Municipal. Em dezembro deste mesmo ano, este grupo já contava com 80 pessoas batizadas. Logo o salão tornou-se pequeno e foi necessário alugar outro maior, entre as Ruas: General Osório e São Sebastião. Mas, a obra decidiu ter prédio próprio e em 1937 aconteceu a inauguração da sede da primeira Igreja Adventista, à Rua: Visconde de Inhaúma, 130. Nesta ocasião o Pr. Manoel Margarido era o Chefe do Distrito Missionário, porque a igreja ainda não era organizada. Após o Pr. Manoel Margarido, vieram o Pr. Elias Castilho, Pr. José Siqueira, Pr. Valdemar Rodrigues, Pr. Ermano Bassi e outros. Mas, foi somente em 1957 que a igreja foi organizada, tendo como Obreiro Oficial o Pr. Waldemar Leitzke. Logo após os pastores: Nazareth Bronze, Ezoardo Ribeiro, Durval Campardo e Ruy Chagas Câmara. Em 1970 com a vinda do Pr. Cesar Augusto da Costa, houve necessidade de um novo endereço e no final do mesmo ano, a igreja antiga foi vendida e comprado um terreno à Rua: Visconde do Rio Branco, 862 onde nos encontramos hoje. De 1970 a 1973, enquanto era construída nova sede da igreja, os irmãos passaram a frequentar as igrejas da Lapa e da Vila Virginia. Em 1974 retornaram para o novo prédio da Igreja Central, mas como a nave da igreja estava inacabada, as reuniões eram realizadas no Salão dos Jovens. Em 1976 com a vinda do Pr. Renne Teixeira dos Reis, reiniciaram as obras da igreja. Em 1978 foi realizada a inauguração da nova Sede da Igreja Central. Ainda na gestão do Pr. Renne, vale ressaltar a reabertura da Escola Adventista. E para finalizar, segue a primeira ata da comissão da igreja e a relação dos pastores, a partir da organização da igreja em 1957.
+</p>
+<img src="historiaigreja.jpg" alt="#">
+<h5>RELAÇÃO DOS PASTORES DE RIBEIRÃO PRETO – SP
+
+    A PARTIR DA IGREJA ORGANIZADA NA SEDE PRINCIPAL</h5>
+    <table>
+        <caption>Histórico de Pastores</caption>
+        <thead>
+          <tr>
+            <th>Pastores</th>
+            <th>Período</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Waldemar Leitzke</td>
+            <td>1957 – 1958</td>
+          </tr>
+          <tr>
+            <td>Nazareth Bronze</td>
+            <td>1958 – 1960</td>
+          </tr>
+          <tr>
+            <td>Ezoardo Ribeiro</td>
+            <td>1961 – 1963</td>
+          </tr>
+          <tr>
+            <td>Durval Campardo</td>
+            <td>1964 – 1966</td>
+          </tr>
+          <tr>
+            <td>Ruy Chagas Câmara</td>
+            <td>1967 – 1969</td>
+          </tr>
+          <tr>
+            <td>Cesar Augusto da Costa</td>
+            <td>1970 – 1974</td>
+          </tr>
+          <tr>
+            <td>Ancião – Argemiro Fontouro</td>
+            <td>1975 – 1975</td>
+          </tr>
+          <tr>
+            <td>Renne Teixeira dos Reis</td>
+            <td>1976 – 1978</td>
+          </tr>
+          <tr>
+            <td>Gustavo Pires da Silva</td>
+            <td>1979 – 1980</td>
+          </tr>
+          <tr>
+            <td>Ancião – José Duarte de Almeida</td>
+            <td>1980 – 1980</td>
+          </tr>
+          <tr>
+            <td>Josias Moreira de Castro</td>
+            <td>1981 – 1981</td>
+          </tr>
+          <tr>
+            <td>Acilio Alves Filho</td>
+            <td>1982 – 1983</td>
+          </tr>
+          <tr>
+            <td>Ademir de Oliveira</td>
+            <td>1984 – 1985</td>
+          </tr>
+          <tr>
+            <td>Miguel Freire de Oliveira</td>
+            <td>1986 – 1986</td>
+          </tr>
+          <tr>
+            <td>Moab Pimentel</td>
+            <td>1987 – 1990</td>
+          </tr>
+          <tr>
+            <td>Victor de Pádua</td>
+            <td>1991 – 1994</td>
+          </tr>
+          <tr>
+            <td>Laerte Lanza</td>
+            <td>1995 – 1996</td>
+          </tr>
+          <tr>
+            <td>Roberto Urel</td>
+            <td>1997 – 2002</td>
+          </tr>
+          <tr>
+            <td>Aerce Marsola</td>
+            <td>2002 – 2004</td>
+          </tr>
+          <tr>
+            <td>Daniel Tavares Marques</td>
+            <td>2005 – 2006</td>
+          </tr>
+          <tr>
+            <td>Alvaro Martinho</td>
+            <td>2007 – 2007</td>
+          </tr>
+          <tr>
+            <td>José Pereira dos Santos</td>
+            <td>2008 – 2014</td>
+          </tr>
+          <tr>
+            <td>Fábio dos Santos</td>
+            <td>2015 – 2021</td>
+          </tr>
+          <tr>
+            <td>Matheus Motta</td>
+            <td>2022 – 2022</td>
+          </tr>
+          <tr>
+            <td>José Lino</td>
+            <td>2023 – Atual</td>
+          </tr>
+        </tbody>
+      </table>
+      
+</body>
+</html>
