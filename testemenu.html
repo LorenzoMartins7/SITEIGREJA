@@ -1,196 +1,87 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Responsivo</title>
+    <title>História da Igreja Adventista</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #1d1d1d;
+            color: #f2f2f2;
+            line-height: 1.6;
         }
-        .menu {
-            display: flex;
-            align-items: center;
-            background-color: #7f9ea3;
-            padding: 10px 20px;
-            color: white;
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
         }
-        .menu h1 {
-            margin-left: 10px;
+
+        h1 {
+            color: #fca311;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
         }
-        .menu h1 img{
-            width: 250px;
-            height: 60px;
+
+        p {
+            text-align: justify;
+            margin-bottom: 15px;
         }
-        .menu ul {
-            list-style: none;
-            display: flex;
-            padding: 0;
-            margin-left: auto;
+
+        .section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
-        .menu ul li {
-            position: relative;
-            margin: 0 15px;
-        }
-        .menu ul li a {
-            text-decoration: none;
-            color: white;
-        }
-        .menu ul li:hover .dropdown {
-            display: block;
-        }
-        .dropdown {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #1a73e8;
-            padding: 10px 0;
-            width: 200px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .dropdown a {
-            display: block;
+
+        footer {
+            text-align: center;
             padding: 10px;
-            color: white;
+            background-color: #111;
+            color: #aaa;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #fca311;
             text-decoration: none;
         }
-        .dropdown a:hover {
-            background-color: #555;
-        }
-        .hamburguer {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            margin-right: 10px;
-        }
-        .hamburguer div {
-            width: 30px;
-            height: 4px;
-            background-color: white;
-            margin: 5px 0;
-        }
-        .mobile-menu {
-            display: none;
-            flex-direction: column;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: rgba(0, 0, 0, 0.95);
-            justify-content: flex-start;
-            padding-top: 50px;
-            align-items: center;
-            z-index: 1000;
-        }
-        .mobile-menu a {
-            padding: 15px;
-            color: white;
-            text-decoration: none;
-            font-size: 24px;
-        }
-        .mobile-menu a:hover {
-            background-color: #555;
-        }
-        .mobile-menu .dropdown {
-            display: none;
-        }
-        .mobile-menu .expandable:hover .dropdown {
-            display: block;
-            width: 100%;
-        }
-        .close-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 30px;
-            color: white;
-            cursor: pointer;
-        }
-        @media (max-width: 992px) {
-            .menu ul {
-                display: none;
-            }
-            .hamburguer {
-                display: flex;
-            }
-            .mobile-menu.show {
-                display: flex;
-            }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <nav class="menu">
-        <div class="hamburguer" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
+    <div class="container">
+        <h1>Como Tudo Começou</h1>
+        <div class="section">
+            <p>A mensagem Adventista chegou em Ribeirão Preto em 1928, através de um Colportor. Passando por uma estrada a cavalo, encontrou o Sr. Luiz Trivelatto esculpindo um Santo Católico no portão do seu sítio, que hoje está situado no Ribeirão Shopping. Eles começaram a conversar e logo o Colportor pediu pouso ao Sr. Luiz, que bondosamente o recebeu.</p>
+<p>
+                O Colportor trazia consigo duas pesadas malas e pediu que o Sr. Luiz guardasse uma delas, pois voltaria para buscá-la, mas esse dia nunca chegou. Dois anos mais tarde, o Sr. Luiz, não resistindo à curiosidade, abriu a mala e encontrou uma Bíblia. Ao lê-la, descobriu a verdade sobre a guarda do sábado. Como não tinha conhecimento sobre a igreja que guardava o sábado, passou a frequentar os cultos com os Metodistas, mas não se sentia satisfeito.
+                </p><p>
+                Um dia, ao sair da sua igreja, descobriu um pequeno salão com o letreiro: Igreja Adventista do Sétimo Dia, onde o Pr. Luis Braun realizava os cultos com poucas pessoas. Interessado, passou a frequentar a igreja com toda a sua família. Além dos cultos, eram realizados estudos bíblicos com seis famílias na residência da Sra. Suzana Ferreira, na Rua Ceará, nos Campos Elíseos.</p>
+
+            <p>Vale ressaltar que o Sr. Luiz Trivelatto era pai de Rosa Sella e avô de João e Nelson Sella. Rosa, filha de Luiz Trivelatto, decidiu guardar o sábado após um milagre da cura do seu filho Nelson. Em 1930, aconteceu o primeiro batismo, do qual participaram Rosa Sella, Luiz Trivelatto com sua família e outros.</p>
+            <p>No início de 1932, foi formado outro grupo de estudos, desta vez na residência da Sra. Rosa Trigo, na Vila Tibério. Nessa ocasião, o Pr. Alfredo Meyer dava assistência espiritual ao pequeno grupo. Mais tarde, com a vinda permanente da Obreira Bíblica Iracema Zorub, foi alugado um salão maior na Rua Tibiriçá, para comportar todas as famílias.</p>
+            <p>O maior batismo aconteceu em 1932, através de uma conferência pública realizada pelo Pr. Gerônimo Garcia, com o apoio da Obreira Iracema Zorub. Para alegria de todos, cerca de 40 pessoas foram batizadas no Córrego Ribeirão, próximo ao local onde hoje se encontra a Câmara Municipal. Em dezembro do mesmo ano, o grupo já contava com 80 pessoas batizadas.</p>
+<p>
+                Com o crescimento da congregação, o salão alugado tornou-se pequeno, sendo necessário alugar outro maior, entre as Ruas General Osório e São Sebastião. No entanto, a igreja decidiu construir um prédio próprio, e em 1937 foi inaugurada a sede da primeira Igreja Adventista, na Rua Visconde de Inhaúma, 130. Na época, o Pr. Manoel Margarido era o Chefe do Distrito Missionário, pois a igreja ainda não era oficialmente organizada.</p>
+            <p>Após o Pr. Manoel Margarido, vieram outros pastores, como o Pr. Elias Castilho, Pr. José Siqueira, Pr. Valdemar Rodrigues e Pr. Ermano Bassi. No entanto, somente em 1957 a igreja foi oficialmente organizada, tendo como Obreiro Oficial o Pr. Waldemar Leitzke. Em seguida, passaram pela igreja os pastores Nazareth Bronze, Ezoardo Ribeiro, Durval Campardo e Ruy Chagas Câmara.</p>
+            <p>Em 1970, com a chegada do Pr. Cesar Augusto da Costa, surgiu a necessidade de um novo endereço. No final desse mesmo ano, a igreja antiga foi vendida e um terreno foi comprado na Rua Visconde do Rio Branco, 862, onde a igreja se encontra atualmente.</p>
+            <p>De 1970 a 1973, enquanto a nova sede era construída, os membros passaram a frequentar as igrejas da Lapa e da Vila Virgínia. Em 1974, retornaram para o novo prédio da Igreja Central, mas como a nave da igreja ainda estava inacabada, as reuniões eram realizadas no Salão dos Jovens.</p>
+            <p>Em 1976, com a vinda do Pr. Renne Teixeira dos Reis, as obras da igreja foram retomadas. Em 1978, ocorreu a inauguração da nova sede da Igreja Central. Ainda durante a gestão do Pr. Renne, houve a reabertura da Escola Adventista.</p>
+            <p>Para finalizar, segue a primeira ata da comissão da igreja e a relação dos pastores a partir da organização da igreja em 1957.</p>
         </div>
-        <h1>Logo</h1>
-        <ul>
-            <li>
-                <a href="#">Ministérios</a>
-                <div class="dropdown">
-                    <a href="#">Igreja da Criança</a>
-                    <a href="#">Rede LKC</a>
-                    <a href="#">YES UP</a>
-                    <a href="#">Upgrade</a>
-                    <a href="#">Ministérios Assistenciais</a>
-                    <a href="#">Ministérios Educacionais</a>
-                    <a href="#">YES MOVEMENT</a>
-                </div>
-            </li>
-            <li>
-                <a href="#">Conteúdo</a>
-                <div class="dropdown">
-                    <a href="#">Quem somos</a>
-                    <a href="#">Programação Semanal</a>
-                    <a href="#">Equipe Pastoral</a>
-                    <a href="#">Nossa História</a>
-                    <a href="#">Fundamentos de Fé</a>
-                    <a href="#">Visão Celular</a>
-                </div>
-            </li>
-            <li><a href="#">Serviços</a></li>
-            <li><a href="#">Contato</a></li>
-        </ul>
-    </nav>
-    <div class="mobile-menu" id="mobileMenu">
-        <span class="close-btn" onclick="toggleMenu()">&times;</span>
-        <div class="expandable">
-            <a href="#">Ministérios</a>
-            <div class="dropdown">
-                <a href="#">Igreja da Criança</a>
-                <a href="#">Rede LKC</a>
-                <a href="#">YES UP</a>
-                <a href="#">Upgrade</a>
-                <a href="#">Ministérios Assistenciais</a>
-                <a href="#">Ministérios Educacionais</a>
-                <a href="#">YES MOVEMENT</a>
-            </div>
-        </div>
-        <div class="expandable">
-            <a href="#">Conteúdo</a>
-            <div class="dropdown">
-                <a href="#">Quem somos</a>
-                <a href="#">Programação Semanal</a>
-                <a href="#">Equipe Pastoral</a>
-                <a href="#">Nossa História</a>
-                <a href="#">Fundamentos de Fé</a>
-                <a href="#">Visão Celular</a>
-            </div>
-        </div>
-        <a href="#">Serviços</a>
-        <a href="#">Contato</a>
+        <footer>
+            <p>Para mais informações, visite o site oficial: <a href="https://institucional.adventistas.org/pt/quem-somos/identidade/nossa-historia/" target="_blank">História da Igreja Adventista</a></p>
+        </footer>
     </div>
-    <script>
-        function toggleMenu() {
-            document.getElementById('mobileMenu').classList.toggle('show');
-        }
-    </script>
 </body>
 </html>
