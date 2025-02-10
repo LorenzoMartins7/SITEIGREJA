@@ -130,6 +130,33 @@ body {
                 display: flex;
             }
         }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 900px;
+        }
+        .item {
+            flex: 1 1 calc(50% - 20px); /* Ocupa metade do espaço com espaçamento */
+            text-align: center;
+        }
+        .item img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .item p {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        @media (max-width: 600px) {
+            .item {
+                flex: 1 1 100%; /* Ocupa 100% da largura em telas pequenas */
+            }
+        }
     </style>
 </head>
 <body>
@@ -175,18 +202,28 @@ body {
         function toggleMenu() {
             document.getElementById('mobileMenu').classList.toggle('show');
         }
+
     </script>
-        <div><img src="" alt=""><p></p></div>
-        <div><img src="" alt=""><p></p></div>
-        <div><img src="" alt=""><p></p></div>
-        <div><img src="" alt=""><p></p></div>
-        <div><img src="" alt=""><p></p></div>
-        <div><img src="" alt=""><p></p></div>
-        <div><img src="" alt=""><p></p></div>
-        <div><img src="" alt=""><p></p></div>
-        <div><img src="" alt=""><p></p></div>
-        <div><img src="" alt=""><p></p></div>
-        <div><img src="" alt=""><p></p></div>
-        <div><img src="" alt=""><p></p></div>
+    <div class="container">
+        <div class="item">
+            <img src="https://via.placeholder.com/300" alt="Imagem 1">
+            <p>Texto abaixo da imagem 1</p>
+        </div>
+        <div class="item">
+            <img src="https://via.placeholder.com/300" alt="Imagem 2">
+            <p>Texto abaixo da imagem 2</p>
+        </div>
+    </div>
+        <div><img src="WhatsApp Unknown 2025-02-04 at 19.14.49/andfre.jpeg" alt=""><p></p></div>
+        <div><img src="WhatsApp Unknown 2025-02-04 at 19.14.49/camargo.jpeg" alt=""><p></p></div>
+        <div><img src="WhatsApp Unknown 2025-02-04 at 19.14.49/carvalho.jpeg" alt=""><p></p></div>
+        <div><img src="WhatsApp Unknown 2025-02-04 at 19.14.49/diego.jpeg" alt=""><p></p></div>
+        <div><img src="WhatsApp Unknown 2025-02-04 at 19.14.49/eduardinho.jpeg" alt=""><p></p></div>
+        <div><img src="WhatsApp Unknown 2025-02-04 at 19.14.49/eliel.jpeg" alt=""><p></p></div>
+        <div><img src="WhatsApp Unknown 2025-02-04 at 19.14.49/gilberto.jpeg" alt=""><p></p></div>
+        <div><img src="WhatsApp Unknown 2025-02-04 at 19.14.49/gisele.jpeg" alt=""><p></p></div>
+        <div><img src="WhatsApp Unknown 2025-02-04 at 19.14.49/gustavo.jpeg" alt=""><p></p></div>
+        <div><img src="WhatsApp Unknown 2025-02-04 at 19.14.49/TRistão.jpeg" alt=""><p></p></div>
+        <div><img src="WhatsApp Unknown 2025-02-04 at 19.14.49/valerio.jpeg" alt=""><p></p></div>
 </body>
 </html>
