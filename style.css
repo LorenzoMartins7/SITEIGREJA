@@ -53,14 +53,14 @@ background-color: #ffffff;
 .dropdown a {
     display: block;
     padding: 10px;
-    color: white;
+    color: #003767;;
     text-decoration: none;
 }
 .dropdown a:hover {
     background-color: #c9ab93ad;
 }
 .menu .dropdown a{
-    color: rgb(255, 255, 255);
+    color: #003767;;
 }
 .hamburguer {
     display: none;
@@ -130,7 +130,7 @@ color: #003767;
 
 .rodape-container {
     background-color: #2c3e50;
-    color: white;
+    color: #003767;
     padding: 20px;
     text-align: center;
     width: 100%;
