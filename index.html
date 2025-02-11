@@ -13,13 +13,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-/* Remove a rolagem lateral */
-html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Impede rolagem para o lado */
-    width: 100%;
-}
 
 .menu {
             display: flex;
@@ -137,28 +130,51 @@ html, body {
                 display: flex;
             }
         }
-        /* Hero Section */
-        .hero {
-    width: 100vw; /* Garante que a largura seja sempre 100% da tela */
-    height: 100vh; /* Garante que a altura ocupe toda a tela */
+       /* Remove a rolagem lateral */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Impede rolagem lateral */
+    width: 100%; /* Garante que o body tenha 100% da largura da tela */
+}
+
+/* Remove a rolagem lateral */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Impede rolagem lateral */
+    width: 100%; /* Garante que o body tenha 100% da largura da tela */
+}
+
+/* A seção hero */
+.hero {
+    width: 100vw; /* Ocupa 100% da largura da tela */
+    min-height: 100vh; /* Garante que a altura ocupe no mínimo 100% da tela */
     background-image: url("WhatsApp Image 2025-02-03 at 14.01.43.jpeg");
-    background-size: cover; /* Faz a imagem cobrir toda a área sem distorcer */
-    background-position: center; /* Mantém a imagem centralizada */
-    background-repeat: no-repeat; /* Evita repetição */
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #000000;
     text-align: center;
-    padding: 20px;
+    padding: 0; /* Remove padding */
+    box-sizing: border-box; /* Garantir que o padding e border não aumentem o tamanho */
 }
 
 /* Ajuste para telas menores */
 @media (max-width: 768px) {
     .hero {
-        height: auto; /* Ajusta a altura dinamicamente em telas menores */
-        min-height: 100vh; /* Garante que preencha toda a tela */
+        width: 100%; /* Ocupa 100% da largura em telas pequenas */
+        height: 100vh; /* Garante que a altura ocupe 100% da tela */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 100vh; /* Garante que a imagem cubra toda a tela em dispositivos pequenos */
     }
 }
 
