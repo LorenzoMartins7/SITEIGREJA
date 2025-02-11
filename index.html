@@ -13,10 +13,12 @@
             padding: 0;
             box-sizing: border-box;
         }
-body {
+/* Remove a rolagem lateral */
+html, body {
     margin: 0;
-    font-family: 'Roboto', Arial, sans-serif;
-    background-color: #ffffff;
+    padding: 0;
+    overflow-x: hidden; /* Impede rolagem para o lado */
+    width: 100%;
 }
 
 .menu {
@@ -25,6 +27,7 @@ body {
             background-color: #b1cfcf;
             padding: 10px 20px;
             color: white;
+          
         }
         .menu a {
             margin-left: 10px;
@@ -136,17 +139,28 @@ body {
         }
         /* Hero Section */
         .hero {
-            height: 800px; /* Altura da seção */
-            background-image: url('frenteigrajfrase.jpeg'); /* Nome da imagem de fundo */
-            background-size: cover; /* Ajusta a imagem para cobrir toda a área */
-            background-position: center; /* Centraliza a imagem */
-            display: flex;
-            flex-direction: column;
-            justify-content: right;
-            align-items: first baseline;
-            color: #000000;
-            text-align: center;
-        }
+    width: 100vw; /* Garante que a largura seja sempre 100% da tela */
+    height: 100vh; /* Garante que a altura ocupe toda a tela */
+    background-image: url("WhatsApp Image 2025-02-03 at 14.01.43.jpeg");
+    background-size: cover; /* Faz a imagem cobrir toda a área sem distorcer */
+    background-position: center; /* Mantém a imagem centralizada */
+    background-repeat: no-repeat; /* Evita repetição */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    .hero {
+        height: auto; /* Ajusta a altura dinamicamente em telas menores */
+        min-height: 100vh; /* Garante que preencha toda a tela */
+    }
+}
 
         .hero h1 {
             font-size: 48px;
@@ -325,11 +339,6 @@ body {
         </p>
     </section>
 
-    <!-- Seção Serviços -->
-    <section class="section" id="services">
-        <h2>Serviços</h2>
-        <p2>Oferecemos eventos, estudos bíblicos, apoio comunitário e muito mais para fortalecer sua jornada espiritual.</p2>
-    </section>
 
     <!-- Seção Contato -->
     <section class="section" id="contact">
