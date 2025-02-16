@@ -20,6 +20,8 @@
             background-color: #b1cfcf;
             padding: 10px 20px;
             color: white;
+            margin-bottom: 40px; /* Adicionei margem inferior para afastar o menu */
+
           
         }
         .menu a {
@@ -146,66 +148,65 @@ html, body {
     width: 100%; /* Garante que o body tenha 100% da largura da tela */
 }
 
-/* A seção hero */
-.hero {
-    width: 100vw; /* Ocupa 100% da largura da tela */
-    min-height: 100vh; /* Garante que a altura ocupe no mínimo 100% da tela */
-    background-image: url("WhatsApp Image 2025-02-03 at 14.01.43.jpeg");
-    background-size: cover; /* Faz a imagem cobrir toda a tela */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita repetição da imagem */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #000000;
-    text-align: center;
-    padding: 0; /* Remove padding */
-    box-sizing: border-box; /* Garantir que o padding e border não aumentem o tamanho */
-}
-
-/* Ajuste para telas menores */
-@media (max-width: 768px) {
-    .hero {
-        width: 100%; /* Ocupa 100% da largura em telas pequenas */
-        height: 100vh; /* Garante que a altura ocupe 100% da tela */
-    }
-}
-
-@media (max-width: 480px) {
-    .hero {
-        height: 100vh; /* Garante que a imagem cubra toda a tela em dispositivos pequenos */
-    }
-}
-
-        .hero h1 {
-            font-size: 48px;
-            margin: 0;
-            font: italic;
-            padding-top: 80px;
-            padding-left: 40px;
-        }
-        
-        .hero p {
-            font-size: 20px;
-            margin: 10px 0 20px;
+.container {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 1100px; /* Aumentei a largura do container */
+            margin-left: 20px;
             
+            gap: 50px; /* Maior espaço entre a imagem e o texto */
         }
 
-        .hero button {
-            background-color: #001f3f;
-            color: rgb(255, 255, 255);
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
+        .image {
+            flex: 1.5; /* Aumentei a proporção da imagem */
         }
 
-        .hero button:hover {
-            background-color: #00509e;
+        .image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
         }
 
+        .text {
+            flex: 1;
+            text-align: left;
+            text-align: justify; /* Texto justificado */
+        }
+
+        h4 {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #000;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #333;
+            line-height: 1.6;
+            font-size: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+                text-align: justify; /* Texto justificado */
+                gap: 30px; /* Ajuste no espaçamento */
+            }
+
+            .image {
+                flex: none;
+                width: 100%;
+            }
+        }
         /* Conteúdo */
         .section {
             padding: 60px 10%;
@@ -279,7 +280,7 @@ html, body {
                     <a href="juvenis.html">Sala do juvenis</a>
                     <a href="primarios.html">Sala do primários </a>
                     <a href="jardimdainfancia.html">Sala do jardim da infância</a>
-                    <a href="primarios.html">Sala do rol do berço</a></li>
+                    <a href="roldoberço.html">Sala do rol do berço</a></li>
             <li><a href="crenças.html">Crenças</a></li>
             <li><a href="historia.html">História</a></li>
             <li><a href="pastor.html">Pastor distrital</a></li>
@@ -327,11 +328,22 @@ html, body {
         
 
     <!-- Hero Section -->
-    <section class="hero">
-        <h1>
-        </h1>
-        <p></p>
-    </section>
+    <div class="container">
+        <div class="image">
+            <img src="igreja/frenteigrejaboa.jpeg" alt="Igreja">
+        </div>
+        <div class="text">
+            
+            <h2>Bem-vindo!</h2>
+            <p>
+               Nossa missão é servir e salvar! Anunciamos ao mundo nossa maior eperança: a breve volta de Jesus! 
+
+            </p>
+            
+                
+            
+        </div>
+    </div>
     <section class="section" id="about">
         <h2>Horarios de culto</h2></p><p></p>
         <h3>Sabádos: 9h00 às 12h00</h3>
@@ -419,7 +431,7 @@ html, body {
         </div>
         
         <div class="rodape-copy">
-            © 2025 Igreja Adventisa do Sétimo Dia -Central Ribeirão Preto
+            © 2025 Igreja Adventisa do Sétimo Dia Central Ribeirão Preto
         </div>
     </div>
 </body>

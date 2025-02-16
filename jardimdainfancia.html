@@ -6,6 +6,37 @@
     <title>IASD Central RP</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="Logo2.ico.jpg" type="icon">
+    <style>
+        
+        section  {
+     text-align: center;
+ }
+ section h1{
+             font-family: sans-serif;
+             font-size: 70px 70px;
+             padding: auto;
+             margin-top: 20px;
+         }
+ section img {
+     padding: 40px;
+     max-width: 100%; /* Faz a imagem se ajustar ao tamanho da tela */
+     height: auto; /* Mantém a proporção da imagem */
+ }
+ 
+ /* Ajustes para telas menores */
+ @media (max-width: 1024px) {
+     section img {
+         height: 500px; /* Reduz a altura da imagem para telas médias */
+     }
+ }
+ 
+ @media (max-width: 768px) {
+     section img {
+         height: auto; /* Remove altura fixa e ajusta a proporção */
+         padding: 20px; /* Reduz o padding para telas menores */
+     }
+ }
+     </style>
 </head>
 <body>
     <nav class="menu">
@@ -30,7 +61,7 @@
                     <a href="juvenis.html">Sala do juvenis</a>
                     <a href="primarios.html">Sala do primários </a>
                     <a href="jardimdainfancia.html">Sala do jardim da infância</a>
-                    <a href="primarios.html">Sala do rol do berço</a></li>
+                    <a href="roldoberço.html">Sala do rol do berço</a></li>
             <li><a href="crenças.html">Crenças</a></li>
             <li><a href="historia.html">História</a></li>
             <li><a href="pastor.html">Pastor distrital</a></li>
@@ -74,32 +105,12 @@
         function toggleMenu() {
             document.getElementById('mobileMenu').classList.toggle('show');
         }
-    </script>
-        <div class="rodape-coluna">
-            <h3>Salas e Ministérios</h3>
-            <ul>
-                <li><a href="jovem.html">Sala Jovem</a></li>
-                <li><a href="adolescentes.html">Sala Adolescentes</a></li>
-                <li><a href="juvenis.html">Sala Juvenis</a></li>
-                <li><a href="primarios.html">Sala Primários</a></li>
-                <li><a href="jardimdainfancia.html">Sala Jardim da Infância</a></li>
-                <li><a href="roldoberço.html">Sala Rol do Berço</a></li>
-            </ul>
-        </div>
-        <div class="rodape-coluna">
-            <h3>Redes Sociais</h3>
-            <ul>
-                <li><a href="https://www.facebook.com/iasdcentralribeiraopreto">Facebook</a></li>
-                <li><a href="https://www.instagram.com/adventistasribeiraopreto?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a></li>
-                <li><a href="https://open.spotify.com/playlist/1AtG9Fxi0iiJPXGP1dPHxC?si=vJ6ycF0GQrmCToUKvSxo-w">Hinos</a></li>
-            </ul>
-        </div>
-    </div>
-    <script>
-        function toggleMenu() {
-            document.getElementById('mobileMenu').classList.toggle('show');
-        }
-    </script>
+    </script> <section>
+        <h1>Jardim da infância</h1>
+        <img src="igreja/jardimdainfancia.jpeg" alt="igreja">
+</section>
+    
+   
         <div class="rodape-container">
             <div class="rodape-grid">
                 
@@ -146,7 +157,7 @@
             </div>
             
             <div class="rodape-copy">
-                © 2025 Igreja Adventisa do Sétimo Dia -Central Ribeirão Preto
+                © 2025 Igreja Adventisa do Sétimo Dia Central Ribeirão Preto
             </div>
         </div>
 </body>
