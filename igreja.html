@@ -17,14 +17,14 @@ section h1{
             padding: auto;
             margin-top: 20px;
         }
-section img {
-    width: 90vw; /* Ocupa toda a largura da tela */
-    height: 100vh; /* Ocupa toda a altura da tela */
-    object-fit: cover; /* Garante que a imagem cubra toda a tela sem distorcer */
-    display: block;
-    margin: 0 auto;
-    padding: 20px;
-}
+        section img {
+             
+     padding: 40px;
+     max-width: 100%; /* Faz a imagem se ajustar ao tamanho da tela */
+     height: auto; /* Mantém a proporção da imagem */
+ }
+
+
 
 /* Ajustes para telas menores */
 @media (max-width: 1024px) {
@@ -35,7 +35,7 @@ section img {
 
 @media (max-width: 768px) {
     section img {
-        height: 80vh; /* Reduz um pouco a altura para telas menores */
+        height: auto; /* Mantém a proporção original da imagem */
 }}
     </style>
     
